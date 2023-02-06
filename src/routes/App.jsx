@@ -13,18 +13,20 @@ import Layout from "../components/Layout";
 function App() {
 
   const router = createBrowserRouter([
-    {path:'/', element: <Home/> },
-    {path:'/checkout', element: <CheckOut/> },
-    {path:'/checkout/information', element: <Information/> },
-    {path:'/checkout/payment', element: <Payment/> },
-    {path:'/checkout/success', element: <Success/> },
-    {path:'', element: <NotFound/> },
+    {
+      path:'', 
+      element: <Layout/>, 
+      children:[
+        {path:'/', element: <Home/>,  errorElement:<NotFound/> },
+        {path:'/checkout', element: <CheckOut/> },
+        {path:'/checkout/information', element: <Information/> },
+        {path:'/checkout/payment', element: <Payment/> },
+        {path:'/checkout/success', element: <Success/> },
+      ]
+    }
   ])
 
-  return (
-  <Layout>
-   <RouterProvider router={router} />
-  </Layout>)
+  return <RouterProvider router={router} />
 }
 
 export default App;
