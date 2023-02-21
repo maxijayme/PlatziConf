@@ -20,6 +20,7 @@
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .Checkout-element {
   display: flex;
