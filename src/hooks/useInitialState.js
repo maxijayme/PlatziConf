@@ -50,6 +50,13 @@ const useInitialState = ()=>{
 
     }
 
+    const clearCart = () =>{
+        setState({
+            ...state,
+            cart: []
+        })
+    }
+
     return {
         state,
         addToCart,
@@ -57,6 +64,7 @@ const useInitialState = ()=>{
         deleteFromCart,
         addToBuyer,
         addNewOrder,
+        clearCart,
     }
 }
 

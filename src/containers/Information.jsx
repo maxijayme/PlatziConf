@@ -15,6 +15,7 @@ function Information() {
     const formData = new FormData(form.current);
     const buyer = Object.fromEntries(formData);
     addToBuyer(buyer)
+    console.log(buyer)
     navigate('/checkout/payment')
   }
 
@@ -34,7 +35,7 @@ function Information() {
             <input type="text" placeholder='Email' name='email' />
             <input type="text" placeholder='Address' name='address' />
             <input type="text" placeholder='Apto.' name='apto' />
-            <input type="text" placeholder='City' name='City' />
+            <input type="text" placeholder='City' name='city' />
             <input type="text" placeholder='Country' name='country' />
             <input type="text" placeholder='State' name='state' />
             <input type="text" placeholder='Postal Code' name='cp' />

@@ -7,7 +7,7 @@ import '../styles/components/Payment.css'
 
 function Payment() {
 
-  const {state, addNewOrder}= useContext(AppContext);
+  const {state, addNewOrder, clearCart}= useContext(AppContext);
   const {cart, buyer} = state;
   const navigate = useNavigate()
   const paypal_id = process.env.PAYPAL_ID
@@ -15,12 +15,14 @@ function Payment() {
   const paypalOptions = {
     "client-id": paypal_id,
     intent: 'capture',
-    currency: 'USD'
+    currency: 'USD',
+    'disable-funding':'sofort'
   }
 
   const buttonStyles = {
     layout: "horizontal",
-    shape: "rect"
+    shape: "rect",
+    color:'blue',
   }
 
   const handleSumTotal = totalAmount;
@@ -32,6 +34,7 @@ function Payment() {
         payment: data
       }
       addNewOrder(newOrder)
+      clearCart()
       navigate('/checkout/success')
   }
 
