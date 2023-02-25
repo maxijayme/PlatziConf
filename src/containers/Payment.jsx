@@ -12,6 +12,7 @@ function Payment() {
   const navigate = useNavigate()
   const paypal_id = process.env.PAYPAL_ID
 
+  //card: visa, 4032036210805154, 08/28, 710
   const paypalOptions = {
     "client-id": paypal_id,
     intent: 'capture',
