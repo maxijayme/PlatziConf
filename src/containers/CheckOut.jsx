@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {MdDelete} from 'react-icons/md'
 import AppContext from '../context/AppContext'
 import totalAmount from '../utils/totalAmout'
-import '../styles/components/CheckOut.css'
+import '../styles/components/Checkout.css'
 
 
 function CheckOut() {
