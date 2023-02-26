@@ -17,7 +17,6 @@ const useGetAddressLocation = (address) => {
         address()
       },[]
       )
-     console.log('map',map)
   return map
 }
 

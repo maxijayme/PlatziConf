@@ -7,7 +7,6 @@ function Products() {
   const {state, addToCart} = useContext(AppContext);
   const {products} = state;
 
-  console.log(state)
   const handleAddToCart = product => () =>{
     addToCart(product)
   }
